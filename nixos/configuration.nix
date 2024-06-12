@@ -159,6 +159,13 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.git = {
+    enable=true;
+    config={
+      user.name="juanpablo4l";
+      user.email="blondyn526j@gmail.com";
+    };
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
