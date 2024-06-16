@@ -5,11 +5,23 @@
 }: let
   
 in {
-    programs = {
-        zsh.enable = true;
-        oh-my-zsh = {
+ programs = {
+      zsh = {
+          enable = true;
+          enableAutosuggestions = true;
+          syntaxHighlighting.enable = true;
+          oh-my-zsh = {
             enable = true;
-            theme = "robbyrussell";
-        };
-    };
+            theme = "agnoster";
+            plugins = [
+              "git"
+              "npm"
+              "history"
+              "node"
+              "rust"
+              "deno"
+            ];
+          };
+      };
+  };
 }
