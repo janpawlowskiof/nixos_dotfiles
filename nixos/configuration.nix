@@ -18,7 +18,7 @@
     # inputs.hardware.nixosModules.common-ssd
 
     # You can also split up your configuration and import pieces of it here:
-    # ./users.nix
+    ./stylix.nix
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -170,12 +170,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	neovim
-	wget
-	git
-	nh
-	vscode
-  neofetch
+    neovim
+    wget
+    git
+    nh
+    vscode
+    neofetch
+    foot
+    ranger
   ];
 
   # Installing globaly zsh
