@@ -22,6 +22,11 @@ in {
               "deno"
             ];
           };
+          initExtra = "neofetch";
       };
+  };
+  home.file.".config/neofetch" = {
+    source = ./neofetch;
+    recursive = true;
   };
 }
