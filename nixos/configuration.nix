@@ -18,7 +18,7 @@
     # inputs.hardware.nixosModules.common-ssd
 
     # You can also split up your configuration and import pieces of it here:
-    ./stylix.nix
+    # ./stylix.nix
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -178,12 +178,19 @@
     neofetch
     foot
     ranger
+    spotify
+    htop
   ];
 
   # Installing globaly zsh
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
   programs.zsh.enable = true;
+
+  stylix.enable = true;
+  stylix.autoEnable = true;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
+  stylix.image = "/home/juan/Downloads/notexisting/wallpaper0.jpg";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

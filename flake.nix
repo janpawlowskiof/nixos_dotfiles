@@ -19,6 +19,7 @@
     self,
     nixpkgs,
     home-manager,
+    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -56,9 +57,8 @@
       hpsff = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          # > Our main nixos configuration file <
+          stylix.nixosModules.stylix
           ./nixos/configuration.nix
-          inputs.stylix.nixosModules.stylix
         ];
       };
     };
