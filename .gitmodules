@@ -1,0 +1,3 @@
+[submodule "modules/home-manager/astronvim"]
+	path = modules/home-manager/astronvim
+	url = https://github.com/AstroNvim/template
