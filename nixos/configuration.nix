@@ -180,6 +180,7 @@
     ranger
     spotify
     htop
+    swww
   ];
 
   # Installing globaly zsh

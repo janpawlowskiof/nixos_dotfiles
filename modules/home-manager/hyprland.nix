@@ -8,8 +8,11 @@ in {
     wayland.windowManager.hyprland = {
         enable = true;
         settings = {
+            "exec-once" = [
+                "swww init && swww img $HOME/.wallpapers/old.png"
+            ];
             "$mainMod" = "SUPER";
-            "$terminal" = "foot";
+            "$term" = "foot";
             debug = {
                 disable_logs = false;
             };
