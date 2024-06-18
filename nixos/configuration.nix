@@ -104,8 +104,8 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -187,10 +187,15 @@
   environment.shells = with pkgs; [ zsh ];
   programs.zsh.enable = true;
 
+    programs.hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    };
+
   stylix.enable = true;
   stylix.autoEnable = true;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
-  stylix.image = "/home/juan/Downloads/notexisting/wallpaper0.jpg";
+  stylix.image = "/home/juan/Downloads/wallpaper0.jpg";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

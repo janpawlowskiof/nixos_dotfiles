@@ -3,4 +3,5 @@
 {
   neofetch = import ./neofetch.nix;
   zsh = import ./zsh.nix;
+  hyprland = import ./hyprland.nix;
 }
