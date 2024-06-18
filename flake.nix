@@ -58,8 +58,8 @@
       hpsff = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          stylix.nixosModules.stylix
           ./nixos/configuration.nix
+          stylix.nixosModules.stylix
         ];
       };
     };
