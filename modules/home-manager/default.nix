@@ -4,4 +4,5 @@
   wallpapers = import ./wallpapers.nix;
   zsh = import ./zsh.nix;
   hyprland = import ./hyprland.nix;
+  astronvim = import ./astronvim.nix;
 }

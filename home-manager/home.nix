@@ -14,6 +14,7 @@
     outputs.homeManagerModules.wallpapers
     outputs.homeManagerModules.zsh
     outputs.homeManagerModules.hyprland
+    outputs.homeManagerModules.astronvim
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
