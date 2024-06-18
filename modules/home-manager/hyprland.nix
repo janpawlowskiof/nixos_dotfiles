@@ -9,7 +9,7 @@ in {
         enable = true;
         settings = {
             "exec-once" = [
-                "swww init && swww img $HOME/.wallpapers/old.png"
+                # "swww init && swww img $HOME/.wallpapers/old.png"
             ];
             "$mainMod" = "SUPER";
             "$term" = "foot";
