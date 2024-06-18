@@ -41,9 +41,7 @@
       #   });
       # })
     ];
-    # Configure your nixpkgs instance
     config = {
-      # Disable if you don't want unfree packages
       allowUnfree = true;
     };
   };
@@ -66,4 +64,23 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "24.05";
+
+  stylix = {
+    autoEnable = true;
+    opacity.terminal = 0.5;
+    targets = {
+      alacritty.enable = true;
+
+      firefox.enable = true;
+      qutebrowser.enable = true;
+
+      foot.enable = true;
+      kitty.enable = true;
+      lazygit.enable = true;
+
+      gtk.enable = true;
+      hyprland.enable = true;
+      kde.enable = false;
+    };
+  };
 }
