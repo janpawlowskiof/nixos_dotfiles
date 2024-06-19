@@ -51,13 +51,13 @@
     homeDirectory = "/home/juan";
   };
 
-  # Add stuff for your user as you see fit:
-  programs.neovim.enable = true;
+  programs = {
+    home-manager.enable = true;
+    neovim.enable = true;
+    foot.enable = true;
+    lazygit.enable = true;
+  };
   home.packages = with pkgs; [ steam ];
-
-  # Enable home-manager and git
-  programs.home-manager.enable = true;
-  programs.git.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

@@ -21,6 +21,14 @@
     ./hardware-configuration.nix
   ];
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      juan = import ../home-manager/home.nix;
+    };
+    backupFileExtension = "backup";
+  };
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -173,9 +181,7 @@
     nh
     vscode
     neofetch
-    foot
     ranger
-    spotify
     htop
     swww
     gcc
